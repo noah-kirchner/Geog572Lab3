@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+            <title></title>
+
+        <!--custom stylesheet-->
+        <link rel="stylesheet" href="css/style.css">
+        <!--external stylesheets-->
+        <link rel="stylesheet" href="lib/scrollmap.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+        <style>
+            body {
+                font-family: 'Ubuntu', sans-serif;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="content">
+             <!--title block, background image is title image-->
+            <div class="row" style="background-image:url(assets/title.png); background-size:contain; background-repeat:no-repeat; background-position:center;">
+                <div class="center title">
+                    <!--title text-->
+                    <h1>Castelao Map</h1>
+                    <!--subtitle or author-->
+                    <p class="author">Noah Kirchner</p>
+                </div>
+            </div>
+            <!--text content block-->
+            <div class="row">
+                <div class="center">
+                    <p>This explainer describes a web map based on the minimalist, geometric abstraction style of Leandro Castelao</p>
+                </div>
+            </div>
+            <!--side by side text and image-->
+            <div class="row">
+                <div class="left">
+                    <img class="fit" src="assets/inspiration.png" style="display: block; margin-left: auto; margin-right: auto;">
+                </div>
+                <div class="right">
+                    <p class="vert-center">Inspired by Castelao's sleek, contemporary minimalist style, this map emphasizes human geography with bold, crisp lines on a palette that balances warmth, contrast, and modern freshness.</p>
+                </div>
+            </div>
+
+            <!--background images with text scrolling over them (sidecar)-->
+            <div class="scroll-container">    
+                <!--background images-->
+                <div class="background-item">
+                    <img src="assets/background1.png" data-slide="1" class="fill" style="display: block; margin-left: auto; margin-right: auto;">
+                    <img src="assets/background2.png" data-slide="2" class="fill hidden" style="display: block; margin-left: auto; margin-right: auto;">
+                    <img src="assets/background3.png" data-slide="3" class="fill hidden" style="display: block; margin-left: auto; margin-right: auto;">
+                    <img src="assets/background4.png" data-slide="4" class="fill hidden" style="display: block; margin-left: auto; margin-right: auto;">
+                </div>
+                <!--foreground text blocks-->
+                <div class="foreground-item">
+                    <div class="row">
+                        <div class="center background-transparent rounded">
+                            <p class="no-margin">At small scales, the simple design draws from Castelao's solid orange and blue scheme, with crisp dark brown lines representing major roads.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="center background-transparent rounded">
+                            <p class="no-margin">Urban areas at larger scales, such as the island of Manhattan pictured here, emphasize Castelao's mixture of clean gray and orange lines. Urban grids accentuate Castelao's geometric design (labels removed to showcase lines).</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="center background-transparent rounded">
+                            <p class="no-margin">Rural areas, such as Vilas County, Wisconsin, make use of Castelao's lighter orange shades and translucent feel while maintaining his blue/orange contrast with water features (labels removed for display).</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="center background-transparent rounded">
+                            <p class="no-margin">Region-level scales make use of Castelao's moderate orange tones as state borders, large rivers, interstates, and state highways combine to mimic Castelao's use of solid intersecting lines (labels removed for display).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="center-wide">
+                    <!-- Slideshow container -->
+                    <div class="slideshow-container">
+                        <!--slideshow content goes here-->
+                        <div class="slide">
+                            <img src="assets/slide1.png" style="display: block; margin-left: auto; margin-right: auto;">
+                            <p class="caption">Small scale view.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="assets/slide2.png" style="display: block; margin-left: auto; margin-right: auto;">
+                            <p class="caption">A mid-scale view of Southeast Wisconsin.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="assets/slide3.png" style="display: block; margin-left: auto; margin-right: auto;">
+                            <p class="caption">A large-scale view of the Milwaukee Area.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="assets/slide4.png" style="display: block; margin-left: auto; margin-right: auto;">
+                            <p class="caption">Downtown Milwaukee, Wisconsin.</p>
+                        </div>
+                        <!-- Next and previous buttons -->
+                        <a class="prev">&#10094;</a>
+                        <a class="next">&#10095;</a>
+
+                        <!-- The dots/circles -->
+                        <div class="slideshow-dots">
+                            <span class="dot" id="1"></span>
+                            <span class="dot" id="2"></span>
+                            <span class="dot" id="3"></span>
+                            <span class="dot" id="4"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="center-wide">
+                    <iframe class="fit" src="https://api.mapbox.com/styles/v1/noahkirchner/cmdwm6qob00vd01qpbzuog0l2.html?title=view&access_token=pk.eyJ1Ijoibm9haGtpcmNobmVyIiwiYSI6ImNtZHdtMG0zYzF4OGgyanB2N3J6YmJyb2gifQ.IQA4LIr-Rvz8z2NH_vcrdg&zoomwheel=true&fresh=true#0/0/0"></iframe>
+                </div>
+            </div>
+
+            <!--credits-->
+            <div class="row no-margin">
+                <div class="center">
+                    <div class="credits">
+                        <p><b>Credits:</b></p>
+                        <p>Map created with Mapbox Studio</p>
+                        <p>Data from openstreetmap</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--external scripts-->
+        <script type="text/javascript" src="lib/scrollmap.js"></script>
+    </body>
+</html>
